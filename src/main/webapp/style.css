@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #f4f6f8; color: #1f2937; }
+.center-page { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.card { background: #fff; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.08); padding: 32px; }
+.login-card { width: min(420px, 100%); }
+h1 { margin: 0 0 8px; }
+.subtitle { color: #6b7280; margin-bottom: 24px; }
+label { font-weight: 600; display: block; margin-bottom: 7px; }
+input, select { width: 100%; padding: 12px 13px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 15px; }
+button { border: 0; border-radius: 8px; padding: 12px 18px; background: #2563eb; color: #fff; font-weight: 700; cursor: pointer; }
+form button { width: 100%; margin-top: 14px; }
+.error { background: #fee2e2; color: #991b1b; padding: 10px 12px; border-radius: 8px; margin-bottom: 16px; }
+.chat-page { min-height: 100vh; }
+.topbar { background: #111827; color: #fff; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; }
+.topbar h1 { font-size: 24px; }
+.topbar span { color: #d1d5db; font-size: 14px; }
+.logout { color: #fff; text-decoration: none; border: 1px solid #6b7280; padding: 8px 12px; border-radius: 8px; }
+.chat-shell { width: min(900px, calc(100% - 32px)); margin: 24px auto; background: #fff; border-radius: 14px; box-shadow: 0 10px 30px rgba(0,0,0,.08); padding: 18px; }
+.toolbar { display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 12px; margin-bottom: 16px; }
+.toolbar label { margin: 0; }
+.chat-box { height: 480px; overflow-y: auto; border: 1px solid #e5e7eb; border-radius: 10px; padding: 14px; background: #f9fafb; }
+.empty { text-align: center; color: #6b7280; padding: 36px 10px; }
+.message { max-width: 78%; padding: 10px 12px; border-radius: 10px; margin-bottom: 10px; }
+.message.mine { margin-left: auto; background: #dbeafe; }
+.message.theirs { margin-right: auto; background: #e5e7eb; }
+.message-meta { display: flex; justify-content: space-between; gap: 16px; font-size: 12px; color: #6b7280; margin-bottom: 5px; }
+.message-text { white-space: pre-wrap; word-break: break-word; }
+.message-form { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 14px; }
+.message-form button { width: auto; margin: 0; }
+@media (max-width: 600px) { .toolbar { grid-template-columns: 1fr; } .message { max-width: 92%; } }
