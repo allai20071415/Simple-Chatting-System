@@ -1,0 +1,27 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chat - Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="center-page">
+<div class="card login-card">
+    <h1>Simple Chatting System</h1>
+    <p class="subtitle">Login with your username to start chatting.</p>
+
+    <% if ("session".equals(request.getParameter("error"))) { %>
+        <div class="error">Your session expired. Please log in again.</div>
+    <% } else if ("1".equals(request.getParameter("error"))) { %>
+        <div class="error">Username not found. Choose an available account.</div>
+    <% } %>
+
+    <form action="login" method="post">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" maxlength="50" required autofocus>
+        <button type="submit">Login</button>
+    </form>
+</div>
+</body>
+</html>
